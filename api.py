@@ -55,7 +55,7 @@ def disease_prec(query):
 # gives which doctor to consult for predicted disease
 def disease_doc(query):
     results = []
-    with open('Doctor_Versus_Disease.csv', 'r', encoding='ANSI') as file:
+    with open('Doctor_Versus_Disease.csv', 'r', encoding='cp1252') as file:
         reader = csv.DictReader(file)
         for row in reader:
             if query.lower() in row['Drug Reaction'].lower():
